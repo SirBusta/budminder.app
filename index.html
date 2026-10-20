@@ -37,7 +37,7 @@ h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1.15; margin: 0 0 .6r
 .why i { font-size: 1.2rem; color: #c6e2b5; } .why h3 { font-size: 1.15rem; margin: .5rem 0 .3rem; } .why p { margin: 0; color: #dbe6d6; font-size: .95rem; }
 .feat { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; padding: 2.5rem 0; border-top: 1px solid var(--line); }
 .feat:first-of-type { border-top: 0; }
-.feat:nth-child(even) .txt { order: 2; }
+.feat:nth-of-type(even) .txt { order: 2; }
 .feat .num { font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); font-weight: 700; }
 .feat h3 { font-size: 1.8rem; color: var(--forest); margin: .2rem 0 .6rem; } .feat p { color: var(--mut); font-size: 1.05rem; }
 .feat img { width: 100%; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(60,50,20,.12); background: #fff; }
@@ -62,7 +62,7 @@ code { display: block; font-size: .85rem; background: #f1ebdc; border-radius: 8p
 footer { background: var(--forest); color: #d6e2d0; padding: 2.2rem 0; } footer a { color: #fff; } footer .wrap { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
 footer .r { margin-left: auto; }
 @media (max-width: 900px) {
-  header nav { display: none; } .hero, .feat, .demo { grid-template-columns: 1fr; } .feat:nth-child(even) .txt { order: 0; }
+  header nav { display: none; } .hero, .feat, .demo { grid-template-columns: 1fr; } .feat:nth-of-type(even) .txt { order: 0; }
   .why { grid-template-columns: 1fr 1fr; } .inst { grid-template-columns: 1fr; } .faq { columns: 1; } .phones { grid-template-columns: 1fr 1fr; } .phones .photo { display: none; }
   .demo .txt { padding: 1.6rem; } .demo .pic { padding: 1.5rem 0 1.5rem 1.5rem; } section, .band { padding: 3.5rem 0; }
 }
@@ -76,9 +76,9 @@ header img { height: 44px !important; } header .wrap { height: 84px !important; 
 .hero2 .art2 .photo { position: absolute; right: -1rem; top: 0; width: 48%; aspect-ratio: 1; border-radius: 22px; background: center 30%/cover url(img/photo-buds.webp); box-shadow: 0 16px 40px rgba(31,61,43,.25); }
 .hero2 .art2 img { position: relative; width: 92%; border-radius: 14px; border: 5px solid #fff; box-shadow: 0 24px 60px rgba(31,61,43,.28); }
 @media (max-width: 900px) { .hero2 { grid-template-columns: 1fr; } .hero2 .art2 .photo { right: 0; } }
-#features .wrap { max-width: 1320px; }
-.feat { grid-template-columns: 4fr 8fr; gap: 2.5rem; }
-.feat:nth-child(even) { grid-template-columns: 8fr 4fr; }
+#features .wrap { max-width: 1220px; }
+.feat { grid-template-columns: 5fr 7fr; gap: 2.5rem; }
+.feat:nth-of-type(even) { grid-template-columns: 7fr 5fr; }
 .zoom { position: relative; display: block; cursor: zoom-in; }
 .zoom img { display: block; width: 100%; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(60,50,20,.14); background: #fff; }
 .zoom span { position: absolute; right: .8rem; bottom: .8rem; width: 2.4rem; height: 2.4rem; display: grid; place-items: center; background: rgba(31,61,43,.88); color: #fff; font-size: 1rem; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
@@ -87,10 +87,13 @@ header img { height: 44px !important; } header .wrap { height: 84px !important; 
 #features .wrap > h2:first-child + .lead { margin-bottom: 1.5rem; }
 .lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(10,15,10,.88); display: flex; align-items: center; justify-content: center; padding: 1.5rem; cursor: zoom-out; }
 .lightbox img { max-width: 100%; max-height: 100%; border-radius: 10px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
-@media (max-width: 900px) { .feat, .feat:nth-child(even) { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .feat, .feat:nth-of-type(even) { grid-template-columns: 1fr; } }
 
 .btn.off { background: #e8e1cf; color: #6f6a58; cursor: default; }
 .btn .tag { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; background: #fef3c7; color: #92400e; border-radius: 99px; padding: .1rem .5rem; }
+.divider { display: flex; align-items: center; justify-content: center; gap: 1rem; color: var(--leaf); margin: 0 auto 1rem; max-width: 320px; }
+.divider::before, .divider::after { content: ""; flex: 1; height: 2px; border-radius: 2px; background: linear-gradient(90deg, transparent, #c9b98f); }
+.divider::after { background: linear-gradient(90deg, #c9b98f, transparent); }
 .demo h2 .tag { vertical-align: middle; font-family: system-ui, sans-serif; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; background: #fef3c7; color: #92400e; border-radius: 99px; padding: .2rem .65rem; margin-left: .4rem; }
 </style></head><body>
 <header><div class="wrap"><img src="img/budminder-wordmark.svg" alt="BudMinder"><nav><a href="#features">Features</a><a href="#demo">Demo</a><a href="#install">Install</a><a href="https://github.com/SirBusta/budminder">GitHub</a></nav></div></header>
@@ -99,7 +102,7 @@ header img { height: 44px !important; } header .wrap { height: 84px !important; 
 <div class="art2"><div class="photo"></div><img src="img/plant.webp" alt="A plant's page in BudMinder"></div></div>
 <div class="band"><div class="wrap"><h2 class="serif">Why growers use it</h2><p class="lead">Track your grow with a journal that stays on your own hardware.</p>
 <div class="why"><div><i class="fa-solid fa-server"></i><h3 class="serif">Your grow, on your hardware</h3><p>No cloud accounts, no corporate tracking, and no treating your data as a commodity to be sold.</p></div><div><i class="fa-solid fa-code-branch"></i><h3 class="serif">Free and open source</h3><p>No subscriptions or paid tiers. The code is public under the MIT license.</p></div><div><i class="fa-solid fa-camera"></i><h3 class="serif">Connect actions to results</h3><p>Each day&#x27;s notes, watering and feeding sit directly beside that day&#x27;s photos.</p></div><div><i class="fa-solid fa-joint"></i><h3 class="serif">Seed to smoke</h3><p>Rate every harvest or dispensary pickup. Dry and cure times fill themselves in.</p></div><div><i class="fa-solid fa-dna"></i><h3 class="serif">Instant strain lookups</h3><p>Import a strain in one click, complete with breeder, lineage, flowering times, cannabinoids and terpenes.</p></div><div><i class="fa-solid fa-temperature-half"></i><h3 class="serif">The hardware you already own</h3><p>AC Infinity, Ecowitt, and any sensor Home Assistant knows about.</p></div><div><i class="fa-solid fa-box-archive"></i><h3 class="serif">Easy to back up</h3><p>One click makes a single backup file you can restore on any computer.</p></div><div><i class="fa-solid fa-eye"></i><h3 class="serif">Read-only guest view</h3><p>Show your grow to friends without giving them editing access.</p></div></div></div></div>
-<section id="features"><div class="wrap"><h2 class="serif">From seed to jar</h2><p class="lead">Every stage of your grow, on pages designed to work seamlessly together.</p>
+<section id="features"><div class="wrap"><h2 class="serif">From seed to jar</h2><p class="lead">Every stage of your grow, on pages designed to work seamlessly together.</p><span class="divider" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
 <div class="feat"><div class="txt"><div class="num">01</div><h3 class="serif">Plant pages</h3><p>Every plant gets a journal page tracking its stages from germination to harvest, an estimated harvest window, and a daily notebook logging water, feeding, training, measurements and notes right beside that day&#x27;s photos.</p></div><a class="zoom" href="img/plant.webp" title="Click to see the whole page"><img src="img/crop-plant.webp" alt="Plant pages" loading="lazy"><span aria-label="See the whole page"><i class="fa-solid fa-magnifying-glass-plus"></i></span></a></div><div class="feat"><div class="txt"><div class="num">02</div><h3 class="serif">Today</h3><p>Open BudMinder and immediately see pending tasks: plants needing water or nutrients, offline sensors, and aging seed stock. Below your alerts, view each tent with its live climate readings and camera feed.</p></div><a class="zoom" href="img/home.webp" title="Click to see the whole page"><img src="img/crop-home.webp" alt="Today" loading="lazy"><span aria-label="See the whole page"><i class="fa-solid fa-magnifying-glass-plus"></i></span></a></div><div class="feat"><div class="txt"><div class="num">03</div><h3 class="serif">Environment</h3><p>Chart every sensor in a tent on a unified timeline, from the past hour to custom date ranges. Click anywhere on a graph to drop an inspection line displaying what every sensor recorded at that exact moment.</p></div><a class="zoom" href="img/environment.webp" title="Click to see the whole page"><img src="img/crop-environment.webp" alt="Environment" loading="lazy"><span aria-label="See the whole page"><i class="fa-solid fa-magnifying-glass-plus"></i></span></a></div><div class="feat"><div class="txt"><div class="num">04</div><h3 class="serif">Seed Vault</h3><p>Track active seed inventory, batch ages and physical storage locations, with automatic warnings when a pack passes two years. Start a new grow directly from your inventory list.</p></div><a class="zoom" href="img/strains.webp" title="Click to see the whole page"><img src="img/crop-strains.webp" alt="Seed Vault" loading="lazy"><span aria-label="See the whole page"><i class="fa-solid fa-magnifying-glass-plus"></i></span></a></div><div class="feat"><div class="txt"><div class="num">05</div><h3 class="serif">Smoke reports</h3><p>Rate home-grown or dispensary flower on bud quality, taste, smell and effects, then tag the aromas, flavors and effects you noticed from ready-made lists.</p></div><a class="zoom" href="img/smoke-report.webp" title="Click to see the whole page"><img src="img/crop-smoke-report.webp" alt="Smoke reports" loading="lazy"><span aria-label="See the whole page"><i class="fa-solid fa-magnifying-glass-plus"></i></span></a></div><div class="feat"><div class="txt"><div class="num">06</div><h3 class="serif">Help built in</h3><p>Click Help on any page to open contextual documentation, complete with numbered screenshot callouts matching the text.</p></div><a class="zoom" href="img/manual.webp" title="Click to see the whole page"><img src="img/crop-manual.webp" alt="Help built in" loading="lazy"><span aria-label="See the whole page"><i class="fa-solid fa-magnifying-glass-plus"></i></span></a></div>
 </div></section>
 <section id="works" class="tint"><div class="wrap"><h2 class="serif">Works with what you have</h2><p class="lead">BudMinder only reads your sensors. It never changes your device settings.</p>

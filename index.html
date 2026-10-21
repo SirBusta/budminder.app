@@ -21,7 +21,7 @@ header .wrap { display: flex; align-items: center; height: 72px; gap: 1.6rem; } 
 header nav { margin-left: auto; display: flex; gap: 1.5rem; } header nav a { color: var(--ink); text-decoration: none; font-weight: 500; }
 .btn { display: inline-flex; align-items: center; gap: .5rem; padding: .75rem 1.3rem; border-radius: 99px; font-weight: 700; text-decoration: none; }
 .btn.p { background: var(--forest); color: #fff; } .btn.s { border: 1.5px solid var(--forest); color: var(--forest); }
-.hero { display: grid; grid-template-columns: 6fr 5fr; gap: 3rem; align-items: center; padding: 3.5rem 0 4rem; }
+.hero { display: grid; grid-template-columns: 6fr 5fr; gap: 3rem; align-items: center; padding-top: 3.5rem; padding-bottom: 4rem; }
 .hero h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.08; margin: 0 0 1rem; color: var(--forest); }
 .hero p { font-size: 1.15rem; color: var(--mut); margin: 0 0 1.8rem; }
 .ctas { display: flex; gap: .8rem; flex-wrap: wrap; }
@@ -69,11 +69,11 @@ footer .r { margin-left: auto; }
 @media (max-width: 520px) { .why { grid-template-columns: 1fr; } }
 
 header img { height: 44px !important; } header .wrap { height: 84px !important; }
-.hero2 { display: grid; grid-template-columns: 4fr 7fr; gap: 2.5rem; align-items: center; padding: 2.5rem 0 4rem; }
+.hero2 { display: grid; grid-template-columns: 4fr 7fr; gap: 2.5rem; align-items: center; padding-top: 2.5rem; padding-bottom: 4rem; }
 .hero2 h1 { font-size: clamp(2.2rem, 4.2vw, 3.3rem); line-height: 1.08; margin: 0 0 1rem; color: var(--forest); }
 .hero2 p { font-size: 1.1rem; color: var(--mut); margin: 0 0 1.6rem; }
 .hero2 .art2 { position: relative; padding: 13rem 0 0 0; }
-.hero2 .art2 .photo { position: absolute; right: -1rem; top: 0; width: 48%; aspect-ratio: 1; border-radius: 22px; background: center 30%/cover url(img/photo-buds.webp); box-shadow: 0 16px 40px rgba(31,61,43,.25); }
+.hero2 .art2 .photo { position: absolute; right: 0; top: 0; width: 48%; aspect-ratio: 1; border-radius: 22px; background: center 30%/cover url(img/photo-buds.webp); box-shadow: 0 16px 40px rgba(31,61,43,.25); }
 .hero2 .art2 img { position: relative; width: 92%; border-radius: 14px; border: 5px solid #fff; box-shadow: 0 24px 60px rgba(31,61,43,.28); }
 @media (max-width: 900px) { .hero2 { grid-template-columns: 1fr; } .hero2 .art2 .photo { right: 0; } }
 #features .wrap { max-width: 1220px; }
